@@ -37,11 +37,11 @@ namespace Choose_Your_Class
                         Console.ReadKey();
                         break;
                     case "2":
-                        Console.WriteLine("What kind of pizza do you want? Meat Lovers, Veggie or Classic");
+                        Console.WriteLine("What kind of toppings on pizza do you like?");
                         item.Name = Console.ReadLine();
                         Console.WriteLine("Okay, is true that a veggie option or no?");
-
-                        /// if else for two booleans and cw  
+                        bool veggie = true;
+                        bool isThinCrust = true; 
                         Console.WriteLine("Is this pizza thick or thin crust?");
                         Console.ReadLine();
                         Console.WriteLine("What size pizza would you like?");
