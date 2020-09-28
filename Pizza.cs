@@ -72,5 +72,10 @@ namespace Choose_Your_Class
             Price = price;
         }
 
+        //public void Veggie(bool eggie)
+        //{ 
+        //    if veggie = true
+        //        ///
+        //}
     }
 }

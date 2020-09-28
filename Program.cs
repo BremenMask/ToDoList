@@ -39,10 +39,11 @@ namespace Choose_Your_Class
                     case "2":
                         Console.WriteLine("What kind of pizza do you want? Meat Lovers, Veggie or Classic");
                         item.Name = Console.ReadLine();
-                        Console.WriteLine("Okay, is that a veggie option or no?");
-                        
+                        Console.WriteLine("Okay, is true that a veggie option or no?");
+
                         /// if else for two booleans and cw  
-                        /// cw for size, item.size 
+                        Console.WriteLine("Is this pizza thick or thin crust?");
+                        Console.ReadLine();
                         Console.WriteLine("What size pizza would you like?");
                         item.Size = Console.ReadLine();
                         cart.AddGrocery(item);
