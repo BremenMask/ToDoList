@@ -8,15 +8,15 @@ namespace Choose_Your_Class
     {
         static void Main(string[] args)
         {
-            List list = new List();
 
-            Food item = new Food();
+            Pizza item = new Pizza();
 
-            List<Food> ListOfFood = new List<Food>();
+            List<Pizza> listOfPizzas = new List<Pizza>();
+            Cart cart = new Cart();
 
-            Console.WriteLine("Hello! Welcome to Virtual Pets\n");
 
-            object time = null;
+            Console.WriteLine("Hello! Let's chow down on some pizza!");
+
             bool hasItem = true;
             while (hasItem)
             {
@@ -24,41 +24,41 @@ namespace Choose_Your_Class
                 Console.WriteLine("1. Which store are we going to?");
                 Console.WriteLine("2. Add an item to your cart");
                 Console.WriteLine("3. Display your cart");
-                Console.WriteLine("4. Check the time");
-                Console.WriteLine("5. Clear your cart");
-                Console.WriteLine("6. Quit");
+                Console.WriteLine("4. Clear your cart");
+                Console.WriteLine("5. Quit");
 
                 string menuChoice = Console.ReadLine();
-
                 switch (menuChoice)
                 {
                     case "1":
-                        Console.WriteLine("What store are we headed to?");
+                        Console.WriteLine("What Pizza place are we headed to?");
                         string store = Console.ReadLine();
                         Console.WriteLine($"Welcome to {store}");
                         Console.ReadKey();
                         break;
                     case "2":
-                        Console.WriteLine("Add a pizza item to your cart, each items costs $5");
-                        string item = Console.ReadLine();
-                        ///cart = new (item);
-                        ///Cart.Add(item);
+                        Console.WriteLine("What kind of pizza do you want? Meat Lovers, Veggie or Classic");
+                        item.Name = Console.ReadLine();
+                        Console.WriteLine("Okay, is that a veggie option or no?");
+                        
+                        /// if else for two booleans and cw  
+                        /// cw for size, item.size 
+                        Console.WriteLine("What size pizza would you like?");
+                        item.Size = Console.ReadLine();
+                        cart.AddGrocery(item);
                         Console.ReadKey();
                         break;
                     case "3":
-                        foreach (Food selectedItem in Cart.ListOfFood)
+                        foreach (Pizza selectedItem in listOfPizzas)
                         {
-                            selectedItem.DisplayStatus();
+                            Console.WriteLine($"{selectedItem.Name}");
                         }
                         Console.ReadKey();
                         break;
                     case "4":
-                        Console.WriteLine($"You have {time} left");
+                        listOfPizzas.Clear();
                         break;
                     case "5":
-                        ListOfFood.Clear();
-                        break;
-                    case "6":
                         hasItem = false;
                         break;
                     default:
