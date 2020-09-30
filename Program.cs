@@ -9,58 +9,56 @@ namespace Choose_Your_Class
         static void Main(string[] args)
         {
 
-            Pizza item = new Pizza();
+            Main item = new Main();
 
-            List<Pizza> listOfPizzas = new List<Pizza>();
-            Cart cart = new Cart();
+            List<Main> listOfMain = new List<Main>();
+            List newItem = new List();
 
 
-            Console.WriteLine("Hello! Let's chow down on some pizza!");
+            Console.WriteLine("Life is full of obstacles, let's get our To Do list going");
 
-            bool hasItem = true;
-            while (hasItem)
+            bool toDo = true;
+            while (toDo)
             {
-                Console.WriteLine("What would you like to do? You have $25 to spend and 5 minutes to grab it all");
-                Console.WriteLine("1. Which store are we going to?");
-                Console.WriteLine("2. Add an item to your cart");
-                Console.WriteLine("3. Display your cart");
-                Console.WriteLine("4. Clear your cart");
-                Console.WriteLine("5. Quit");
+                Console.WriteLine("Welcome to your To Do List");
+                Console.WriteLine("1. Add a task");
+                Console.WriteLine("2. Describe your task");
+                Console.WriteLine("3. Add an urgency to your task");
+                Console.WriteLine("4. Display your list");
+                Console.WriteLine("5. Clear your list");
+                Console.WriteLine("6. Quit");
 
                 string menuChoice = Console.ReadLine();
                 switch (menuChoice)
                 {
                     case "1":
-                        Console.WriteLine("What Pizza place are we headed to?");
-                        string store = Console.ReadLine();
-                        Console.WriteLine($"Welcome to {store}");
+                        Console.WriteLine("What task are we adding?");
+                        item.Title = Console.ReadLine();
+                        Console.WriteLine($"You have added {item.GetTitle()} to your list");
                         Console.ReadKey();
                         break;
                     case "2":
-                        Console.WriteLine("What kind of toppings on pizza do you like?");
-                        item.Name = Console.ReadLine();
-                        Console.WriteLine("Okay, is true that a veggie option or no?");
-                        bool veggie = true;
-                        bool isThinCrust = true; 
-                        Console.WriteLine("Is this pizza thick or thin crust?");
-                        Console.ReadLine();
-                        Console.WriteLine("What size pizza would you like?");
-                        item.Size = Console.ReadLine();
-                        cart.AddGrocery(item);
+                        Console.WriteLine("Add a description to your tasks");
+                        item.Description = Console.ReadLine();
                         Console.ReadKey();
                         break;
                     case "3":
-                        foreach (Pizza selectedItem in listOfPizzas)
-                        {
-                            Console.WriteLine($"{selectedItem.Name}");
-                        }
+                        Console.WriteLine("Add a number from 1 to 5 to gauge the urgency of this task");
+                        item.Description = Console.ReadLine();
                         Console.ReadKey();
                         break;
                     case "4":
-                        listOfPizzas.Clear();
+                        foreach (Main selectedItem in listOfMain)
+                        {
+                            Console.WriteLine($"{selectedItem.GetTitle()}");
+                        }
+                        Console.ReadKey();
                         break;
                     case "5":
-                        hasItem = false;
+                        listOfMain.Clear();
+                        break;
+                    case "6":
+                        toDo = false;
                         break;
                     default:
                         Console.WriteLine("Invalid entry.");
