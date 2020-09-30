@@ -9,7 +9,7 @@ namespace Choose_Your_Class
         public List<Main> ListOfMain = new List<Main>();
 
 
-        public void AddTask(Main item)
+        public void AddItem(Main item)
         {
             ListOfMain.Add(item);
         }

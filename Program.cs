@@ -9,7 +9,7 @@ namespace Choose_Your_Class
         static void Main(string[] args)
         {
 
-            Main item = new Main();
+            Main main = new Main();
 
             List<Main> listOfMain = new List<Main>();
             List newItem = new List();
